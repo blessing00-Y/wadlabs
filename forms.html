@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms 101</title>
+    </head>
+    <body>
+        <section id="simple-form">
+        <h2>Simple Form</h2>
+        <!-- form element -->   
+        <form method="post"
+            action="process.php"
+            enctype="multipart/form-data"
+            id="simple-form"
+            name="simple-form"
+            class="forms">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required> 
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>  
+            </div>
+            <div class="form-group">
+                <input type="submit" name="login" value="Login" required>
+                <input type="reset" name="reset" value="Clear" required>
+            </div>
+        </form>     
+        </section>
+        <section id="chicken-recipe-form">
+            <h2>Chicken Recipe</h2>
+            <form method="post" action="process2.php">
+                <div class="form-group">
+                    <label for="recipe-title">Recipe Name:</label> 
+                    <input type="text" id="recipe-title" name="recipe_title" required>
+                </div>
+                <div class="form-group">
+                    <label for="dry-ingredients">Dry Ingredients:</label> 
+                    <input type="text" id="dry-ingredients" name="dry_ingredients" required>
+
+                    </div>
+                <div class="form-group">
+                    <label for="dry-ingredients">
+                     <input type="checkbox" name="dry-ingredients" id="dry ingredients" value="salt">Salt 
+                     <input type="checkbox" name="dry-ingredients" id="dry ingredients" value="pepper">Pepper
+                     <input type="checkbox" name="dry-ingredients" id="dry ingredients" value="paprika">Paprika
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="Grilled">Grilled</label>  
+                    <input type="radio" id="grilled" name="dry-ingredients" value="1" required>Yes
+                    <input type="radio" id="grilled" name="dry-ingredients" value="0" required>No
+                    </div>
+
+                <div class="form-group">
+                    <input type="submit" name="submit" value="Submit Recipe" required>
+                    <input type="reset" name="reset" value="Clear" required>
+
+        </section>
+        </body>
+</html>
