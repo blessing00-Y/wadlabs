@@ -18,8 +18,25 @@
     <!-- Add header semantic tag -->
 <!-- Add main heading -->
 <!-- Make "Rockstar Games" bold -->
- <header>
-    <h1>Grand Theft Auto VI</h1>
+ <header style="background-color: lightcoral">
+    <h1 name="title">Grand Theft Auto VI</h1>
+
+    <style>
+        /* Add CSS styles for the header and main heading */
+        h1{ 
+            color: blue;
+            font-size: 48px;
+        }
+        .section-heading{
+            color: lightgreen
+            
+        }
+        #about{
+            background-color: aliceblue;
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/style.css">
     <p>The next generation open-world crime game by <strong>Rockstar Games</strong>.</p>
  </header>
  
@@ -44,14 +61,14 @@ Navigation
 <!-- Add main semantic tag -->
  <main> 
     
-    <section id="about">
-        <h2>About the Game</h2>
+    <section id="about" name="about">
+        <h2 class="section-heading">About the Game</h2>
         <p><strong>GTA 6</strong> is expected to take players back to <em>Vice City</em> with a massive open world, new characters, and improved gameplay mechanics.</p>
         <p title="This is additional information about the game.">This paragraph includes an example of an attribute (tooltip text).</p>
     </section>
 
     <section id="features">
-        <h2>Expected Features</h2>
+        <h2 class="section-heading">Expected Features</h2>
         <h4>Gameplay Features</h4>
         <ul>
             <li>Open world exploration</li>
@@ -63,12 +80,12 @@ Navigation
         <h4>New Improvements</h4>
         <ol>
             <li>Better graphics</li>
-            <li>Larger map</li>
+            <li>Larger map</li> 
             <li>Realistic NPC behavior</li>
             <li>Enhanced vehicles</li>
         </ol>
-        <section id="characters">
-            <h2>Main Characters</h2>
+        <section id="characters" name="characters">
+            <h2 class="section-heading">Main Characters</h2>
             <article>
                 <h3>Lucia</h3>
                 <p><strong>Lucia</strong> is one of the first female protagonists in GTA history. She is known for her bold personality and criminal background.</p>
