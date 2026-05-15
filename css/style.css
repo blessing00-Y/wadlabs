@@ -74,4 +74,15 @@ body{
 h1, h2{
     font-family: 'Ultra', sans-serif;
 }
+header > b{
+    color: var(--col-sunset);
+    letter-spacing: 2px;
+    font-size: 0.95em;
+}
 
+header h1{
+    color: var(--col-cyan);
+    font-size: 3.5em;
+    margin-top: 0;
+    margin-right: 0;
+}
