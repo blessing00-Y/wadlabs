@@ -80,9 +80,57 @@ header > b{
     font-size: 0.95em;
 }
 
+header{
+    padding-top: 5px;
+    padding-bottom: 20px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--col-cyan);
+    text-align: center;
+}
+
 header h1{
-    color: var(--col-cyan);
     font-size: 3.5em;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--col-cyan-light);
+    margin-left: 8px;
+    margin-bottom: 0;
     margin-top: 0;
     margin-right: 0;
+    
+}
+
+nav{
+    margin-top: 10px;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    align-items: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--col-coral);
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border: 1px solid var(--col-cyan);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover{
+    background-color: var(--col-cyan);
+    color: var(--col-bg-deep);
+    border-color: var(--col-pink-soft);
 }
