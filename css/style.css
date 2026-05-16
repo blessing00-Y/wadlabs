@@ -211,5 +211,26 @@ main ol li::marker{
     color: var(--col-coral);
 }
 
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
+footer{
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--col-bg-mid);
+    color: var(--col-muted);
+}
+
+footer p{
+    color: var(--col-muted);
+}
+
+hr{
+    border: 1px solid var(--col-cyan);
+    border-top: 1px solid var(--col-amber);
+    margin: 40px 0;
+}
 
