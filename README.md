@@ -26,7 +26,7 @@ php/
     <tr>
       <td><b>I am a 19 year old student who loves music and learning new things</b></td>
       <td width="50%" rowspan="4">
-        <img alt="Photo" src="IMG_5178.PNG" />
+        <img alt="Photo" src="c:\Users\yulab\Downloads\businesswoman.png" />
       </td>
     </tr>
     <tr>
