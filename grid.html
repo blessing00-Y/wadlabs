@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid Layout</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                font-size: 24px;
+ 
+            }
+            .container{
+                display: grid; 
+                grid-template-columns: 100px 1fr 100px;
+                grid-template-rows:80px 1fr 40px;
+                grid-template-areas: 
+                    "header header header"
+                    "l-aside main r-aside"
+                    "footer footer footer";
+                    gap: 8px;
+                    padding: 8px;
+
+            }
+
+
+            header{
+                grid-area: header;
+                background-color: lightblue;
+            }
+
+            #left-aside{
+                grid-area: l-aside;
+                background-color: lightgreen;
+            }
+
+            #right-aside{
+                grid-area: r-aside;
+                background-color: lightcoral;
+            }
+
+            main{
+                grid-area: main;
+                background-color: lightgray;
+                height: 79vh;
+            }
+
+            #right-aside{
+                grid-area: r-aside;
+                background-color: lightcoral;
+            }
+
+            footer{
+                grid-area: footer;
+                background-color: lightyellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+
+            </header>
+            <aside id="left-aside">left-aside</aside>
+            <main>Main Content</main>
+            <aside id="right-aside">right-aside</aside>   
+            <footer>Footer</footer>
+        </div>
+    </body>
+</html>
