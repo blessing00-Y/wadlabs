@@ -153,3 +153,27 @@ console.log(bbit_2b_students.entries().toArray())
 console.log(Object.keys(student));
 console.log(Object.values(student));
 console.log(Object.entries(student));   
+
+//DOM- Document Object Model
+console.log(document);
+console.log(document);
+
+//Elements on our page (varaibles)
+const heading = document.querySelector('h1');
+console.log(heading);
+const previewImage = document.querySelector('img');
+console.log(previewImage);
+const aboutSection = document.getElementById('about');
+console.log(aboutSection);
+const allSections = document.querySelectorAll('section');
+console.log(allSections);
+ const allSections = document.querySelectorAll('section');
+console.log(allSections);
+const allNavLinks = document.querySelectorAll('nav a');
+console.log(allNavLinks);
+
+let aboutParagraph = document.querySelector('#about p');
+
+//change its text
+aboutParagraph.textContent ="This text was changed!";
+aboutParagraph.style.color = "red";
