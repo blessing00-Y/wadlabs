@@ -125,7 +125,7 @@ console.log('My name is ',
 
 //a method in the object
 student.addattendance(); //add attendance by 1
-console.log(studenyt.attendance);//21
+console.log(student.attendance);//21
 
 //array of objects
 let bbit_2b= [
@@ -149,3 +149,7 @@ console.log(bbit_2b_students.values().toArray())
 //getting both keys and values of an object as an array
 console.log(bbit_2b_students.entries().toArray())
 
+//console.log(student.keys())
+console.log(Object.keys(student));
+console.log(Object.values(student));
+console.log(Object.entries(student));   
