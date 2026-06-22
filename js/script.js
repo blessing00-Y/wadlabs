@@ -136,18 +136,17 @@ let bbit_2b= [
 ];
 
 //Print out the names of all students in bbit 2b using a loop
-bbit_2b_students.forEach(function(student){
-    console.log(student.name);
+bbit_2b.forEach(function(student){
+    console.log(student.name); 
 });
 
 //getting the keys of an object as an array
-console.log(bbit_2b_students.keys().toArray())
-
+console.log(Object.keys(bbit_2b[0]));
 //getting the values of an object as an array
-console.log(bbit_2b_students.values().toArray())
+console.log(Object.values(bbit_2b[0]));
 
 //getting both keys and values of an object as an array
-console.log(bbit_2b_students.entries().toArray())
+console.log(Object.entries(bbit_2b[0]));
 
 //console.log(student.keys())
 console.log(Object.keys(student));
@@ -167,8 +166,6 @@ const aboutSection = document.getElementById('about');
 console.log(aboutSection);
 const allSections = document.querySelectorAll('section');
 console.log(allSections);
- const allSections = document.querySelectorAll('section');
-console.log(allSections);
 const allNavLinks = document.querySelectorAll('nav a');
 console.log(allNavLinks);  
 
@@ -179,8 +176,6 @@ aboutParagraph.textContent ="This text was changed!";
 aboutParagraph.style.color = "red";
 
 //setting/setter - updating the page from js
-const previewImage = document.querySelector('img');
-console.log(previewImage);
 
 //via the DOM 
 previewImage.setAttribute("title", "New Title of Image");
@@ -203,8 +198,8 @@ changeTextBtn.addEventListener("click", function(event){
 //use case 2 
 let highlightSectionBtn = document.querySelector("#highlightSectionBtn");
 highlightSectionBtn.addEventListener("click", function(event){
-    document.querySelectorAll("section").classList.toggle("section-highlight");
-
+    document.querySelectorAll("section").classList.toggle("section-highlight"); 
+ 
     //highlight all the sections
     document.querySelectorAll("section").forEach(function(section){
         section.classList.toggle("section-highlight");
@@ -217,3 +212,63 @@ document.querySelector("#nameInput").addEventListener("input",
     function(event){
         document.querySelector("#nameOutput").textContent = "Hello " + document.querySelector("#nameInput").value + "!"; 
     });
+
+//case 4  - character counter
+let gtaCommentTextArea = document.querySelector("#commentInput");
+let charCountParagraph = document.querySelector("#charCount");
+
+gtaCommentTextArea.addEventListener("input",function(e){
+    //code goes here a.k.a what will be executed when the event happens
+    //console.log("typing...");
+
+    let numberOfChars = gtaCommentTextArea.value.length;
+    //update the paragraph
+    charCountParagraph.textContent = "Characters: "+numberOfChars;
+
+    //prevent the user from typing after 60
+    if(numberOfChars > 60){
+        e.preventDefault();
+    } else{
+        //update the paragraph
+        charCountParagraph.textContent = "Characters: "+numberOfChars;
+    }
+});  
+
+//case 5 - keyboard events
+let keyOutput = document.querySelector("#keyOutput");
+document.addEventListener("keydown", function(event){
+    //updating the paragraph
+    keyOutputParagraph.textContent = "You pressed: "+event.key;
+
+});
+
+//case 6 - todo list, wish list
+let wishListInput = document.querySelector("#wishListInput");
+let wishListButton = document.querySelector("#wishListForm button");
+
+//<ul> </ul>
+let wishListItems = document.querySelector("#wishListItems");
+wishListButton.addEventListener("click", function(event){
+    event.preventDefault(); //prevent the form from submitting and refreshing the page
+
+    //get the value from the input
+    let wishListInputValue = wishListInput.value;
+    console.log(wishListInputValue);
+
+    //update the list of the wishListInputValue !=null
+    if (wishListInputValue !=""){
+        //console.log(wishListInputValue); 
+        let li = document.createElement("li");
+        let button = document.createElement("button");
+        button.textContent = "Delete";
+        li.textContent = wishListInputValue;
+        
+        li.appendChild(button);
+
+        //we append the list to the Ul
+        wishListItems.appendChild(li);
+
+        //finally we clear what the user typed in the input field
+        wishListInput.value = "";
+    }
+});
