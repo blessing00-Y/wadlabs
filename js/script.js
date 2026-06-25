@@ -272,3 +272,65 @@ wishListButton.addEventListener("click", function(event){
         wishListInput.value = "";
     }
 });
+
+//cas 6b-removing items from the wish list
+let deleteButtons = document.querySelectorAll("#wishlistItems button");
+console.log(deleteButtons);
+
+//iterate a.k.a loop through the buttons
+deleteButtons.forEach(button=>{
+    button.addEventListener("click", event=>{
+        //console.log("delete button clicked");  
+        //how do you get the first list item in an unordered list
+        //given that the ul has an id of #wishlistItems
+        //let first_li = document.querySelector("#wishlistItems li");
+        //first_li.remove();
+
+        //TODO, how do you use the parent, parentElement
+        button.closest("li").remove();
+
+    }) 
+});
+
+//case 7 - submit form / validation
+//show what someone filled in the form
+let submitButton = document.querySelector("#feedbackForm button");
+let feedbackForm = document.querySelector("#feedbackForm");
+let feedbackOutput = document.querySelector("#feedbackOutput");//div
+feedbackForm.addEventListener("submit", event=>{
+    //prevent the form from being submitted normally
+    event.preventDefault();
+    //console.log("submit button clicked");
+    const name = document.querySelector("#fanName").value;//name 
+    const email = document.querySelector("#fanEmail").value;//email 
+    const message = document.querySelector("#fanMessage").value;//message, textarea
+
+    feedbackOutput.innerHTML = 
+    "<strong> Fan Feedack Submitted </strong><br>" +
+    "<p>Name: " + name + "</p>" +
+    "<p>Email: " + email + "</p>" +
+    "<p>Message: " + message + "</p>";
+
+    //clear the form fields
+    name.value = "";
+    email.value = "";
+    message.value = "";
+
+    //add success styles
+    feedbackOutput.classList.add('success-text');
+
+});   
+
+let resetBtn = document.querySelector("#resetBtn");
+//undo the changed text
+demoText.textContent=
+"Click the button to modify this text using JavaScript.";
+demoText.style.color="black";
+demoText.style.fontSize="14px";//has no effect 
+
+//undo the highlight of the sections 
+
+ document.querySelectorAll("section").forEach(section=>{
+    //section.classList.toggle("section-highlight");
+    section.classList.toggle("section-highlight");
+});
