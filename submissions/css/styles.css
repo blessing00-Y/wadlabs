@@ -244,3 +244,49 @@ footer {
         font-size: 2rem;
     }
 }
+/* ==========================================================================
+   JAVASCRIPT COMPONENT INTERACTIVE STYLES
+   ========================================================================== */
+
+.hidden-caption {
+    display: none;
+    background-color: #fce4ec;
+    color: #c62828;
+    padding: 0.6rem 1rem;
+    border-left: 4px solid #c62828;
+    margin-bottom: 1.2rem;
+    font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.hidden-caption.revealed {
+    display: block;
+}
+
+#wishlist-container li {
+    background: #fff8f0;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.6rem;
+    border-radius: 6px;
+    border: 1px dashed #c62828;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-btn {
+    background: #c62828;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.remove-btn:hover {
+    background: #8e0000;
+}
